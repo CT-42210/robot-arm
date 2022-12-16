@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Time App</title>
+  </head>
+  <body>
+    <h1>Time App</h1>
+    <p>Click the button to get the current time:</p>
+    <button id="time-button">Get Time</button>
+    <div id="time-display"></div>
+    <script>
+      const timeButton = document.getElementById('time-button');
+      const timeDisplay = document.getElementById('time-display');
+      timeButton.addEventListener('click', () => {
+        // Send an HTTP request to the server when the button is clicked
+        fetch('/get-time')
+          .then(response => response.text())
+          .then(time => {
+            // Update the time display with the response from the server
+            timeDisplay.textContent = time;
+          });
+      });
+    </script>
+  </body>
+</html>
