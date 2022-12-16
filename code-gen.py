@@ -3,7 +3,7 @@ import openai
 
 prompt_return = input("Enter Prompt: \n\n$")
 
-openai.api_key = "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"
+openai.api_key = "idk"
 
 print(os.getenv('API_KEY'))
 
